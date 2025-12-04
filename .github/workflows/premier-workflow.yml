@@ -11,7 +11,7 @@ jobs:
         run: hostnamectl
 
       - name: Afficher l’adressage IPv4
-        run: ip a -4
+        run: ip -4 a
 
       - name: Afficher l’identité de connexion
         run: whoami
