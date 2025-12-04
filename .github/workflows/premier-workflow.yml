@@ -1,0 +1,17 @@
+name: Premier workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  informations_systeme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Afficher les informations de la machine
+        run: hostnamectl
+
+      - name: Afficher l’adressage IPv4
+        run: ip a -4
+
+      - name: Afficher l’identité de connexion
+        run: whoami
