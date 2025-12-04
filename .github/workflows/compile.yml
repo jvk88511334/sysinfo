@@ -1,14 +1,16 @@
-name: Compile C
+name: Build C Program
 
 on: [workflow_dispatch]
 
 jobs:
-  build:
+  compile:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
 
-      - run: sudo apt install -y gcc make
-
-      - run: make build
+      - run: |
+          sudo apt update
+          sudo apt install -y gcc make
+          mkdir -p bin
+          make build
