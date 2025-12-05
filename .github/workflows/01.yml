@@ -11,3 +11,11 @@ jobs:
         run: ip -4 a
       - name: Afficher l’identité de connexion
         run: whoami
+
+
+#1 - Mettre en place un workflow et un job qui exécute les commandes suivantes dans 3 steps :
+#hostnamectl # information sur la machine
+#
+#ip a -4 # adressage ipv4
+#
+#who am i # mon identité de connexion
