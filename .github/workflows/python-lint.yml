@@ -1,4 +1,4 @@
-name: Python Lint
+name: 1 premier workflow
 on: [workflow_dispatch]
 
 jobs:
