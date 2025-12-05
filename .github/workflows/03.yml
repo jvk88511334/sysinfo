@@ -1,0 +1,17 @@
+name: 3 utiliser un container
+on: push
+
+jobs:
+  network-and-system:
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:3.22
+    steps:
+      - name: block information
+        run: lsblk
+
+#Changement d'environnement de travail
+#Exécuter le workflow dans un container basé sur une image docker alpine, 3.22 pour les tâches suivantes:
+#
+#lsblk # information sur le stockage
+#uname -a # information sur le noyau utilisé
